@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Application Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+</body>
+  <form id="loanForm" enctype="multipart/form-data">
+    <!-- Loan Details Section -->
+    <div class="form-section">
+      <h2>Loan Details</h2>
+      <label for="loanAmount">Loan Amount Requested:</label>
+      <input type="number" id="loanAmount" name="loanAmount" placeholdr="INR upto 1 cr" required>
+
+      <label for="loanPurpose">Loan Purpose:</label>
+      <select id="loanPurpose" name="loanPurpose">
+        <option value="education">Education</option>
+        <option value="medical">Medical Expenses</option>
+        <option value="wedding">Wedding</option>
+        <option value="travel">Travel</option>
+        <option value="renovation">Home Renovation</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="loanTenure">Loan Tenure Requested:</label>
+      <input type="number" id="loanTenure" name="loanTenure" placeholder="Years upto 10" required>
+    </div>
+
+    <!-- Personal Information Section -->
+    <div class="form-section">
+      <h2>Personal Information</h2>
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label>Date of Birth:</label>
+      <div>
+        <label for="day">Day:</label>
+        <input type="text" id="day" name="day" placeholder="DD" required>
+
+        <label for="month">Month:</label>
+        <input type="text" id="month" name="month" placeholder="MM" required>
+
+        <label for="year">Year:</label>
+        <input type="text" id="year" name="year" placeholder="YYYY" required>
+      </div>
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="nationality">Nationality:</label>
+      <input type="text" id="nationality" name="nationality" required>
+
+      <label for="maritalStatus">Marital Status:</label>
+      <select id="maritalStatus" name="maritalStatus">
+        <option value="single">Single</option>
+        <option value="married">Married</option>
+        <option value="divorced">Divorced</option>
+        <option value="widowed">Widowed</option>
+      </select>
+
+      <label for="dependents">Number of Dependents:</label>
+      <input type="number" id="dependents" name="dependents" required>
+
+      <label for="presentAddress">Present Residential Address:</label>
+      <textarea id="presentAddress" name="presentAddress" required></textarea>
+
+      <label for="wfhCheckbox">Work From Home:</label>
+      <input type="checkbox" id="wfhCheckbox" name="wfhCheckbox">
+      <span>(The applicant needs to send a mail to the bank officials informing that they are in work-from-home mode from their company email ID.)</span>
+
+      <label for="permanentSameCheckbox">Permanent Address Same as Present:</label>
+      <input type="checkbox" id="permanentSameCheckbox" name="permanentSameCheckbox">
+    </div>
+
+    <!-- Permanent Address Section -->
+    <div class="form-section">
+      <h2>Permanent Address</h2>
+      <label for="permanentAddress">Permanent Residential Address:</label>
+      <textarea id="permanentAddress" name="permanentAddress"></textarea>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div class="form-section">
+      <h2>Contact Information</h2>
+      <label for="mobileNumber">Mobile Number:</label>
+      <input type="tel" id="mobileNumber" name="mobileNumber" required>
+
+      <label for="emailAddress">Email Address:</label>
+      <input type="email" id="emailAddress" name="emailAddress" required>
+    </div>
+
+    <!-- Employment Information Section -->
+    <div class="form-section">
+      <h2>Employment Information</h2>
+      <label for="occupation">Occupation:</label>
+      <select id="occupation" name="occupation">
+        <option value="salaried">Salaried</option>
+        <option value="selfEmployed">Self-employed</option>
+        <option value="businessOwner">Business Owner</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="employerName">Employer Name:</label>
+      <input type="text" id="employerName" name="employerName">
+
+      <label for="officialEmail">Official Email:</label>
+      <input type="email" id="officialEmail" name="officialEmail">
+
+      <label for="experience">Years of Experience:</label>
+      <input type="number" id="experience" name="experience">
+
+      <label for="monthlyIncome">Monthly Income (Net):</label>
+      <input type="number" id="monthlyIncome" name="monthlyIncome">
+
+      <label for="employmentType">Employment Type:</label>
+      <select id="employmentType" name="employmentType">
+        <option value="permanent">Permanent</option>
+        <option value="contract">Contract</option>
+        <option value="selfEmployed">Self-Employed</option>
+      </select>
+    </div>
+
+    <!-- Documents Collection Section -->
+    <div class="form-section">
+      <h2>Documents Collection</h2>
+      <label for="identityProof">Identity Proof:</label>
+      <select id="identityProof" name="identityProof">
+        <option value="aadharCard">Aadhar Card</option>
+        <option value="passport">Passport</option>
+        <option value="voterID">Voter ID</option>
+        <option value="drivingLicense">Driving License</option>
+      </select>
+
+      <label for="addressProof">Address Proof:</label>
+      <select id="addressProof" name="addressProof">
+        <option value="aadharCard">Aadhar Card</option>
+        <option value="passport">Passport</option>
+        <option value="voterID">Voter ID</option>
+        <option value="drivingLicense">Driving License</option>
+        <option value="utilityBills">Utility Bills (Electricity, Water, Gas)</option>
+      </select>
+
+      <!-- ... (Other document collection form fields) -->
+
+      <label for="fileUpload">Upload Documents:</label>
+      <input type="file" id="fileUpload" name="fileUpload" accept=".pdf, .jpeg, .png" multiple>
+    </div>
+
+    <!-- KYC Verification Button -->
+    <button type="button" id="kycVerifyBtn">Verify KYC</button>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit Application</button>
+  </form>
+
+  <script src="app.js"></script>
+</body>
+</html>

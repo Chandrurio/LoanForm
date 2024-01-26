@@ -1,0 +1,95 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  
+  form {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  div label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  div input[type="text"],
+  div input[type="number"],
+  div input[type="tel"],
+  div input[type="email"] {
+    width: calc(33% - 10px);
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  div select {
+    width: calc(66% - 10px);
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-label input {
+    margin-right: 8px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #kycVerifyBtn {
+    background-color: #3498db;
+  }
+  
+  #kycVerifyBtn:hover {
+    background-color: #2980b9;
+  }
+  
